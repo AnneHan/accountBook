@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false" android:drawable="@color/transparent" />
+    <item android:state_pressed="true" android:drawable="@mipmap/form_row_input_middle_short_left_seleted" />
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@mipmap/form_row_input_middle_short_left_seleted" />
+    <item android:drawable="@color/transparent" />
+</selector>

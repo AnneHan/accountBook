@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/textstyle"
+        android:gravity="center"
+        android:text="@string/regist"
+        android:textColor="#ffff"
+        android:textSize="24sp"/>
+    <!-- input phone -->
+    <EditText
+        android:id="@+id/editPhone"
+        style="@style/textstyle"
+        android:layout_width="fill_parent"
+        android:background="@drawable/rounded_edittext_states"
+        android:hint="手机号"
+        android:lines="1"
+        android:singleLine="true"
+        android:inputType="number"
+        android:maxLength="11"/>
+    <!-- input password -->
+    <EditText
+        android:id="@+id/editPwd"
+        style="@style/textstyle"
+        android:layout_width="fill_parent"
+        android:background="@drawable/rounded_edittext_states"
+        android:hint="密码"
+        android:lines="1"
+        android:password="true"
+        android:singleLine="true"
+        android:maxLength="16"/>
+    <!-- the regist button -->
+    <Button
+        android:id="@+id/btnRegist"
+        style="@style/textstyle"
+        android:layout_width="fill_parent"
+        android:background="@drawable/cycleanytext_shape"
+        android:onClick="OnMyRegistClick"
+        android:text="@string/regist"/>
+</LinearLayout>

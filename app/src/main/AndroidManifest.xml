@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hyl.accountbook" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hyl.accountbook.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.hyl.accountbook.AboutUsActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.LoginActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.RegistActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.ResPwdActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.SpendingActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.SettingActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.WishActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.CountActivity" ></activity>
+        <activity android:name="com.hyl.accountbook.ExpenseProcesActivity"></activity>
+        <activity android:name="com.hyl.accountbook.KeyPad"></activity>
+
+        <activity android:name="org.achartengine.GraphicalActivity" />
+    </application>
+
+</manifest>

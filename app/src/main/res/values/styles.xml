@@ -1,0 +1,183 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <item name="colorPrimary">@color/blue</item>
+
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <item name="colorPrimaryDark">@color/blue1</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <!--<item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>-->
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="textstyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--mymoney_bg-->
+    <style name="common_bg">
+        <item name="android:background">@mipmap/mymoney_bg</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="common_title">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@mipmap/common_title_bg</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30.0dip</item>
+    </style>
+
+    <style name="form_row_input">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:paddingLeft">90.0dip</item>
+        <item name="android:paddingRight">55.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">42.0dip</item>
+    </style>
+
+    <style name="form_row_label" parent="@style/common_row_label">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">75.0dip</item>
+    </style>
+
+    <style name="common_row_label">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff826d28</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:layout_width">75.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="form_row_input_middle" parent="@style/form_row_input">
+        <item name="android:background">@drawable/form_row_input_middle</item>
+    </style>
+
+    <style name="form_row_go_detail" parent="@style/go_detail">
+        <item name="android:layout_marginLeft">270.0dip</item>
+    </style>
+
+    <style name="go_detail">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@mipmap/go_detail</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+
+    <style name="form_row_layout_middle" parent="@style/form_row_layout">
+        <item name="android:background">@mipmap/form_row_layout_middle</item>
+    </style>
+
+    <style name="form_row_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">46.0dip</item>
+    </style>
+
+    <style name="common_toolbar_btn_for_addexpense" parent="@style/common_toolbar_btn">
+        <item name="android:layout_width">120.0dip</item>
+        <item name="android:layout_height">38.0dip</item>
+    </style>
+
+    <style name="common_toolbar_btn">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/common_toolbar_btn</item>
+        <item name="android:layout_width">145.0dip</item>
+        <item name="android:layout_height">46.0dip</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="widget_keypad_decimal_display_hdip" parent="@style/widget_keypad_decimal_display">
+        <item name="android:layout_width">455.0px</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="widget_keypad_decimal_display">
+        <item name="android:textSize">50.0dip</item>
+        <item name="android:textColor">#ff8ee502</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:background">@drawable/widget_keypad_display</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="widget_keypad_row_ly_hdip" parent="@style/widget_keypad_row_ly" />
+    <style name="widget_keypad_digit" parent="@style/widget_keypad_btn">
+        <item name="android:background">@drawable/widget_keypad_digit</item>
+    </style>
+
+    <style name="widget_keypad_digit_hdip" parent="@style/widget_keypad_btn_hdip">
+        <item name="android:background">@drawable/widget_keypad_digit</item>
+    </style>
+
+    <style name="widget_keypad_delete_hdip" parent="@style/widget_keypad_btn_hdip">
+        <item name="android:background">@drawable/widget_keypad_delete</item>
+    </style>
+
+    <style name="widget_keypad_cancel_hdip" parent="@style/widget_keypad_btn_hdip">
+        <item name="android:background">@drawable/widget_keypad_cancel</item>
+    </style>
+
+    <style name="widget_keypad_clean_hdip" parent="@style/widget_keypad_btn_hdip">
+        <item name="android:background">@drawable/widget_keypad_clean</item>
+    </style>
+
+    <style name="widget_keypad_done_hdip" parent="@style/widget_keypad_btn_hdip">
+        <item name="android:background">@drawable/widget_keypad_done</item>
+    </style>
+
+    <style name="widget_keypad_row_ly">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="widget_keypad_btn">
+        <item name="android:textSize">40.0dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/widget_keypad_digit</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+    </style>
+
+    <style name="widget_keypad_btn_hdip" parent="@style/widget_keypad_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
