@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,8 +37,14 @@ import java.util.Map;
  */
 public class OneFragment extends Fragment {
 
+    ListView listView;
+    SimpleAdapter adapter;
+
     List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>(); //存储数据的数组列表
     int[] image_expense = new int[]{R.mipmap.detail_income, R.mipmap.detail_payout }; //存储图片
+
+    //是否第一次加载
+    private boolean isFirstLoading = true;
 
     public OneFragment() {
         // Required empty public constructor
@@ -63,7 +70,7 @@ public class OneFragment extends Fragment {
         }*/
         getData();
 
-        SimpleAdapter adapter = new SimpleAdapter(getActivity()
+        adapter = new SimpleAdapter(getActivity()
                 , listitem
                 , R.layout.fragment_one_item
                 , new String[]{"expense_category", "expense_money", "image_expense"}
@@ -74,7 +81,7 @@ public class OneFragment extends Fragment {
         // 第四个是指定Map对象中定义的两个键（这里通过字符串数组来指定）
         // 第五个是用于指定在布局文件中定义的id（也是用数组来指定）
 
-        ListView listView = (ListView) v.findViewById(R.id.lv_expense);
+        listView = (ListView) v.findViewById(R.id.lv_expense);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {//设置监听器
@@ -85,8 +92,27 @@ public class OneFragment extends Fragment {
             }
         });
 
+        /*
+        // Test--通过Handler动态更新ListView
+        Handler handler = new Handler();
+        // 延迟3秒执行
+        handler.postDelayed(add, 3000);
+        */
+
         return v;
     }
+
+    /*Runnable add = new Runnable(){
+        @Override
+        public void run() {
+            Map<String, Object> map = new HashMap<>();
+            map.put("image_expense", R.mipmap.detail_income);
+            map.put("expense_category", "aaaaaa");
+            map.put("expense_money", "+10");
+            listitem.add(map);
+            adapter.notifyDataSetChanged();
+        }
+    };*/
 
     /**
      * 从数据库获得适配器数据
@@ -125,6 +151,7 @@ public class OneFragment extends Fragment {
             int iColCount = c.getColumnCount();
             int iNumber = 0;
             String strType = "";
+            listitem.clear();
             while (iNumber < c.getCount()){
                 Map<String, Object> map = new HashMap<String, Object>();
 
@@ -140,11 +167,27 @@ public class OneFragment extends Fragment {
                 c.moveToNext();
                 listitem.add(map);
                 iNumber++;
-                System.out.println(listitem);
+                System.out.println(map);
             }
             c.close();
             db.close();
         }
+    }
+
+    /**
+     * 刷新数据
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (!isFirstLoading) {
+            // 刷新数据
+            getData();
+            adapter.notifyDataSetChanged();
+        }
+
+        isFirstLoading = false;
     }
 }
 
